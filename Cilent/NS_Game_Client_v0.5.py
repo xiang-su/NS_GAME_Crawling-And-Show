@@ -1,15 +1,22 @@
-from PyQt5 import QtWidgets
-from main import Ui_Form
-from PyQt5.Qt import QWidget, QApplication,QTableWidgetItem,QMessageBox
 import pymysql.cursors
+from PyQt5 import QtWidgets
+from PyQt5.Qt import QApplication, QMessageBox, QTableWidgetItem, QWidget
+
+from main import Ui_Form
 
 #配置数据库连接
 connect = pymysql.Connect(
-    host='',
+ #   host='',
+ #   port=3306,
+  #  user='root',
+  #  passwd='',
+  #  db='',
+  #  charset='utf8'
+  host='45.77.11.232',
     port=3306,
     user='root',
-    passwd='',
-    db='',
+    passwd='Inspur@871',
+    db='NS_Game',
     charset='utf8'
 )
 # 获取游标
@@ -116,4 +123,3 @@ if __name__ == "__main__":
     myshow = mywindow()
     myshow.show()
     sys.exit(app.exec_())
-
